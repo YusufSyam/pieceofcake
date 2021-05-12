@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     listItemContent += `
           <div class="list_item">
           <div class="container_item" style="background-color: ${item.color}">
-          <img src="/img/taste/${item.src}" alt="${item.src}" />    
+          <img src="img/taste/${item.src}" alt="${item.src}" />    
           </div>
           <p class="text_item">${item.name}</p>
           </div>
@@ -54,7 +54,7 @@ for (let i = 0; i < choices.length; i++) {
 
           <div class="list_item" onclick="iniDiklik(${item})">
           <div class="container_item" style="background-color: ${item.color}">
-          <img src="/img/taste/${item.src}" alt="${item.src}" />    
+          <img src="img/taste/${item.src}" alt="${item.src}" />    
           </div>
           <p class="text_item">${item.name}</p>
           </div>
@@ -71,7 +71,7 @@ for (let i = 0; i < choices.length; i++) {
           listItemContent += `
           <div class="list_item">
           <div class="container_item" style="background-color: ${item.color}">
-          <img src="/img/shape/${item.src}" alt="${item.src}" />    
+          <img src="img/shape/${item.src}" alt="${item.src}" />    
           </div>
           <p class="text_item">${item.name}</p>
           </div>
@@ -88,7 +88,7 @@ for (let i = 0; i < choices.length; i++) {
           listItemContent += `
           <div class="list_item">
           <div class="container_item" style="background-color: ${item.color}">
-          <img src="/img/color/${item.src}" alt="${item.src}" />    
+          <img src="img/color/${item.src}" alt="${item.src}" />    
           </div>
           <p class="text_item">${item.name}</p>
           </div>
@@ -105,7 +105,7 @@ for (let i = 0; i < choices.length; i++) {
           listItemContent += `
           <div class="list_item">
           <div class="container_item" style="background-color: ${item.color}">
-          <img src="/img/topping/${item.src}" alt="${item.src}" />    
+          <img src="img/topping/${item.src}" alt="${item.src}" />    
           </div>
           <p class="text_item">${item.name}</p>
           </div>
@@ -122,7 +122,7 @@ for (let i = 0; i < choices.length; i++) {
           listItemContent += `
           <div class="list_item">
           <div class="container_item" style="background-color: ${item.color}">
-          <img src="/img/addition/${item.src}" alt="${item.src}" />    
+          <img src="img/addition/${item.src}" alt="${item.src}" />    
           </div>
           <p class="text_item">${item.name}</p>
           </div>
@@ -198,7 +198,7 @@ const orderbtn = document.getElementById("orderBtn");
 orderbtn.addEventListener("click", () => {
   if (idItem && price) {
     window.location =
-      "/pages/order.html?id=" +
+      "pages/order.html?id=" +
       idItem +
       "&price=" +
       price +
