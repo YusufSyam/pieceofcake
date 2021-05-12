@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1408.91" height="1408.91" viewBox="0 0 1408.91 1408.91">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 110px;
+      }
+    </style>
+  </defs>
+  <g id="Icon_feather-instagram" data-name="Icon feather-instagram" transform="translate(55 55)">
+    <path id="Path_32" data-name="Path 32" class="cls-1" d="M327.727,3H977.182c179.342,0,324.728,145.385,324.728,324.728V977.182c0,179.342-145.385,324.728-324.728,324.728H327.727C148.385,1301.91,3,1156.525,3,977.182V327.727C3,148.385,148.386,3,327.728,3Z" transform="translate(-3 -3)"/>
+    <path id="Path_33" data-name="Path 33" class="cls-1" d="M425.562,189.323A207.87,207.87,0,1,1,250.432,14.193,207.87,207.87,0,0,1,425.562,189.323Z" transform="translate(432.7 426.455)"/>
+    <path id="Path_34" data-name="Path 34" class="cls-1" d="M26.25,9.75h0" transform="translate(980.405 282.505)"/>
+  </g>
+</svg>
