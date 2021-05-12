@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
   const id = urlParams.get("id");
   const price = urlParams.get("price");
   const items = urlParams.get("items").split(",");
-
   const idElement = document.querySelector(".order_id_cake");
   idElement.innerText = "#" + id;
   const priceElement = document.querySelector(".price_cake");
@@ -14,6 +13,11 @@ document.addEventListener("DOMContentLoaded", (e) => {
   for (let i = 0; i < dt.length; i++) {
     dt[i].innerText = items[i];
   }
+});
+
+const closeBtn = document.querySelector(".right_nav");
+closeBtn.addEventListener("click", () => {
+  window.location = "../index.html";
 });
 
 const orderButton = document.querySelector(".order_button");

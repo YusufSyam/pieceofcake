@@ -1,17 +1,36 @@
 import db from "../db.js";
 
 // Splash Screen
-const splash = document.querySelector("#splash");
-document.addEventListener("DOMContentLoaded", (e) => {
-  setTimeout(() => {
-    splash.classList.add("display-none");
-  }, 2000);
-});
 
 // Choice Item
 let idItem = "0101010000";
 let price = 0;
+
 document.addEventListener("DOMContentLoaded", (e) => {
+  let isFirst = true;
+  idItem = "0101010000";
+  console.log(sessionStorage.getItem("isFirst"));
+  if (sessionStorage.getItem("isFirst") != null) {
+    isFirst = false;
+    idItem = sessionStorage.getItem("idItem");
+  }
+  if (isFirst) {
+    let splashScr = `
+      <div class="splash_item">
+        <img src="img/logo/Group 3.svg" alt="" />
+        <h1>Piece Of Cake</h1>
+        <p>Wujudkan kue impianmu</p>
+      </div>`;
+    let splash = document.createElement("DIV");
+    document.querySelector("body").appendChild(splash);
+    splash.setAttribute("id", "splash");
+    splash.innerHTML = splashScr;
+    setTimeout(() => {
+      splash.classList.add("display-none");
+    }, 2000);
+    sessionStorage.setItem("isFirst", false);
+  }
+
   let listItemContent = "";
   let items = db.find((item) => {
     return item.tipe === "taste";
@@ -196,6 +215,7 @@ function findPrice(id) {
 
 const orderbtn = document.getElementById("orderBtn");
 orderbtn.addEventListener("click", () => {
+  sessionStorage.setItem("idItem", idItem);
   if (idItem && price) {
     window.location =
       "pages/order.html?id=" +
@@ -205,6 +225,12 @@ orderbtn.addEventListener("click", () => {
       "&items=" +
       itemItem;
   }
+});
+
+const aboutbtn = document.getElementById("aboutBtn");
+aboutbtn.addEventListener("click", () => {
+  sessionStorage.setItem("idItem", idItem);
+  window.location = "pages/about.html";
 });
 
 function getLenItem() {
