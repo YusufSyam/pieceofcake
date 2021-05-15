@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 const closeBtn = document.querySelector(".right_nav");
 closeBtn.addEventListener("click", () => {
-  window.location = "../index.html";
+  window.location = "../";
 });
 
 const orderButton = document.querySelector(".order_button");
